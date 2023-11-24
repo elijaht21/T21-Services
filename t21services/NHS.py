@@ -8,6 +8,7 @@ from selenium.webdriver.chrome.service import Service
 import pandas as pd
 
 def scrape_jobs(position, location, miles, template, pages=4):
+    options = Options()
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
     titles = []
