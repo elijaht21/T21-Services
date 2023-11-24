@@ -3,10 +3,12 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
 import pandas as pd
 
 def scrape_jobs(position, location, miles, template, pages=4):
-    driver = webdriver.Chrome(ChromeDriverManager().install())
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
     titles = []
     companies = []
