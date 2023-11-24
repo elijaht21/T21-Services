@@ -21,7 +21,7 @@ def scrape_jobs(position, location, miles, template, pages=4):
    }
    driver = webdriver.Chrome(options=chrome_options,
                                   desired_capabilities=capabilities)
-    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+    
 
     titles = []
     companies = []
