@@ -19,8 +19,7 @@ def scrape_jobs(position, location, miles, template, pages=4):
                 # "resolution": "1280X720"
                 "resolution": "768X432"
    }
-    driver = webdriver.Chrome(options=chrome_options,
-                                  desired_capabilities=capabilities)
+    driver = webdriver.Chrome(options=chrome_options)
     
 
     titles = []
