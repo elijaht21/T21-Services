@@ -1,4 +1,4 @@
-import streamlit as st
+ import streamlit as st
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
@@ -11,7 +11,7 @@ def scrape_jobs(position, location, miles, template, pages=4):
     chrome_options = Options()
     chrome_options.add_argument("--headless")
             
-    driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()),options=chrome_options)
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=chrome_options)
     
 
     titles = []
