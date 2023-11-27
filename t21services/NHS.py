@@ -9,16 +9,8 @@ import pandas as pd
 
 def scrape_jobs(position, location, miles, template, pages=4):
     chrome_options = Options()
-    chrome_options.add_argument('--no-sandbox')
-    chrome_options.add_argument('--disable-dev-shm-usage')
-    chrome_options.add_argument('--force-dark-mode')
-    chrome_options.add_argument("--start-maximized")
+    chrome_options.add_argument("--headless")
             
-    capabilities = {
-                # "resolution": "2560X1440"
-                # "resolution": "1280X720"
-                "resolution": "768X432"
-   }
     driver = webdriver.Chrome(options=chrome_options)
     
 
