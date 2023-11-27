@@ -11,7 +11,7 @@ def scrape_jobs(position, location, miles, template, pages=4):
     chrome_options = Options()
     chrome_options.add_argument("--headless")
             
-    driver = webdriver.Chrome(options=chrome_options)
+    driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()),options=chrome_options)
     
 
     titles = []
